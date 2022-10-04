@@ -61,7 +61,7 @@ X_train, X_test = X_train.align(X_test, join='left', axis=1)
 from xgboost import XGBRegressor
 
 # Define the model
-my_model_1 =XGBRegressor(random_state=0) 
+my_model_1 =XGBRegressor(random_state=0, silent=True) 
 
 # Fit the model
 my_model_1.fit(X_train, y_train)
@@ -106,7 +106,7 @@ print("Mean Absolute Error:" , mae_3)
 from sklearn.model_selection import cross_val_score, KFold
 
 score = my_model_3.score(X_train, y_train)  
-print("Training score: ", score)
+#print("Training score: ", score)
 
 
 
